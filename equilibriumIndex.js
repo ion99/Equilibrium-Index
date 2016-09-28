@@ -1,3 +1,5 @@
+//Time complexity O(n^2) - quadratic
+
 function solution(array) {
   let result = [];
   // function sum(arr){

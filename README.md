@@ -44,3 +44,5 @@ P = 8 is not an equilibrium index, because it does not fulfill the condition 0 â
 Given array A shown above, the function return [1, 3, 7] as explained above.
 
 The function should return âˆ’1 if no equilibrium index exists.
+
+O(n) and O(n^2) time complexity available.

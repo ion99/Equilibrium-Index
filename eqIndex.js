@@ -1,3 +1,5 @@
+//time complexity O(n) - linear
+
 function solution(array) {
   let L = array.length;
   let i;
