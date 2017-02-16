@@ -1,24 +1,23 @@
 //time complexity O(n) - linear
 
 function solution(array) {
-  let L = array.length;
-  let i;
-  let left = [];
-  let right = [];
-  let result = [];
-  for (left[0] = array[0], right[L - 1] = array[L - 1], i = 1; i<L; i++){
-    left[i] = left[i - 1] + array[i], right[L - i - 1] = right[L - i] + array[L - i - 1]
+  
+  let sum = array.reduce((a,b)=> a+b,0);
+  let sum_right;
+  let sum_left = 0;
+  let results = [];
+  for(let i = 0; i < array.length; i++) {
+    sum_right = sum - sum_left - array[i];
+    if (sum_left === sum_right) {
+      results.push(i);
+    }
+    sum_left += array[i];
   }
-  for (i = 0; i < L; i++){
-    if (left[i] === right[i]){
-      result.push(i);
-    } 
-  }
-  if (result.length){
-    return result;
+  if (results) {
+    return results;
   } else {
     return -1;
   }
-  
 }
+
 //solution([-1, 3, -4, 5, 1, -6, 2, 1])
